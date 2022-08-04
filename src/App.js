@@ -10,7 +10,7 @@ import AboutUs from "./Components/AboutUs"
 function App() {
   return (
     <div>
-      <div style={{ backgroundImage: `url(${bg1})`, width: "100%", paddingBottom: "20px", backgroundSize: "100%" }}>
+      <div style={{ backgroundImage: `url(${bg1})`, width: "100%", backgroundSize: "100%" }}>
         <div className="container">
           <NavBar />
           <Header />

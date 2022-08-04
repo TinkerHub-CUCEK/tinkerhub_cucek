@@ -17,7 +17,7 @@ function NavBar() {
                         <Navbar.Brand></Navbar.Brand>
                     </Nav>
                     <div className='d-flex text-white'>
-                        <Nav.Link style={styles.linkText} className='mx-2' href="#home">About us</Nav.Link>
+                        <Nav.Link style={styles.linkText} className='mx-2' href="#about">About us</Nav.Link>
                         <Nav.Link style={styles.linkText} className='mx-2' href="#events">Events</Nav.Link>
                         <Nav.Link style={styles.linkText} className='mx-2' href="#link">Contact</Nav.Link>
                     </div>
