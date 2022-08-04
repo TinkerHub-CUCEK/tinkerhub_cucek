@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
+import bg1 from "./assets/bg1.png"
+import NavBar from "./Components/navBar"
+import "./styles/index.css"
+import SocialIcons from "./Components/socialIcons"
+import Header from "./Components/header"
+import JoinButton from "./Components/Join"
+import AboutUs from "./Components/AboutUs"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ backgroundImage: `url(${bg1})`, width: "100%", paddingBottom: "20px", backgroundSize: "100%" }}>
+        <div className="container">
+          <NavBar />
+          <Header />
+          <SocialIcons />
+          <JoinButton />
+        </div>
+        <AboutUs />
+      </div>
+      <div className="container">
+      </div>
     </div>
   );
 }

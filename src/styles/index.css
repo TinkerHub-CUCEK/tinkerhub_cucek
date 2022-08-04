@@ -1,0 +1,16 @@
+.intro{
+    margin-left: 50%;
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 600px){
+    .intro{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+
+html, body{
+    background-color: #242734;
+}
