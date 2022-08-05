@@ -6,6 +6,7 @@ import SocialIcons from "./Components/socialIcons"
 import Header from "./Components/header"
 import JoinButton from "./Components/Join"
 import AboutUs from "./Components/AboutUs"
+import Events from "./Components/Events"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <JoinButton />
         </div>
         <AboutUs />
+        <Events />
       </div>
       <div className="container">
       </div>
