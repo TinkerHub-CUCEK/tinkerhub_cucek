@@ -8,6 +8,7 @@ import JoinButton from "./Components/Join"
 import AboutUs from "./Components/AboutUs"
 import Events from "./Components/Events"
 import ContactUs from "./Components/ContactUs"
+import Footer from "./Components/Footer"
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
         <AboutUs />
         <Events />
         <ContactUs />
+        <Footer />
       </div>
-      <div className="container">
-      </div>
+      
     </div>
   );
 }

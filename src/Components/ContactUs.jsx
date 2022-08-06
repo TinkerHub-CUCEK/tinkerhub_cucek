@@ -6,6 +6,33 @@ import { Form } from "react-bootstrap"
 
 
 function ContactUs() {
+    var handleFormSubmit = (e) => {
+        e.preventDefault()
+
+        const body = JSON.stringify({
+            access_key: "c47e2d51-c3e6-42b9-a585-84bf17a28784",
+            email: e.target.email.value,
+            subject: e.target.subject.value,
+            message: e.target.message.value
+        })
+        const options = {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body
+        };
+        fetch('https://api.web3forms.com/submit', options)
+            .then(response => response.json())
+            .then((response) => {
+                if (response.success === true) {
+                    alert("The contact form has been submitted successfully")
+                }
+                else {
+                    alert("There was an error while trying to submit the form")
+                }
+                console.log(response)
+            })
+            .catch((err) => alert("There was an error while trying to submit the form"));
+    }
     return (
         <div id="contact" style={{ backgroundColor: "#242734" }}>
             <div className="container text-light">
@@ -30,26 +57,26 @@ function ContactUs() {
                     <div className="card-header">
                         <h2>Use the form below to contact us</h2>
                     </div>
-                    <form className="card-body" action="" method="post">
+                    <form onSubmit={handleFormSubmit} className="card-body" action="" method="post">
                         <Form.Group>
                             <Form.Label>Name</Form.Label>
-                            <Form.Control type="text" placeholder="Your name" />
+                            <Form.Control type="text" placeholder="Your name" name="name" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Your email" />
+                            <Form.Control type="email" placeholder="Your email" name="email" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Subject</Form.Label>
-                            <Form.Control type="text" placeholder="subject" />
+                            <Form.Control type="text" placeholder="subject" name="subject" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Message</Form.Label>
-                            <textarea className="form-control" type="text" placeholder="message"></textarea>
+                            <textarea className="form-control" type="text" placeholder="message" name="message"></textarea>
                         </Form.Group>
                         <Form.Group>
                             <br />
-                            <input style={{width: "100%"}} type="submit" className="btn btn-secondary"></input>
+                            <input style={{ width: "100%" }} type="submit" className="btn btn-secondary"></input>
                         </Form.Group>
                     </form>
                 </div>
