@@ -7,6 +7,7 @@ import Header from "./Components/header"
 import JoinButton from "./Components/Join"
 import AboutUs from "./Components/AboutUs"
 import Events from "./Components/Events"
+import ContactUs from "./Components/ContactUs"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </div>
         <AboutUs />
         <Events />
+        <ContactUs />
       </div>
       <div className="container">
       </div>

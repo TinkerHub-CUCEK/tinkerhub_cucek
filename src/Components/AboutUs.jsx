@@ -23,7 +23,7 @@ function AboutUs() {
             <AboutItem icon={mission} title="Our" title2="Mission">
               We take a unique and innovative approach to teaching and learning that helps students collaborate with like minded peers.Our community members are given internship opportunities which gives them a better exposure and build the potentials as young professionals.
             </AboutItem>
-            <AboutItem icon={vision}>
+            <AboutItem icon={vision} title="Our" title2="Vision">
               We do not sell dreams; rather we help our members work towards them. Our vision is to help students to improve their engineering skills by providing innovative, best guidance through interactive technology and methodology and to make learning meaningful and joyful.
             </AboutItem>
           </div>

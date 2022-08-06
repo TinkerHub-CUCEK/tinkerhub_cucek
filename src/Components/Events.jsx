@@ -34,13 +34,13 @@ function Events() {
             setQueryDone(true)
         }
 
-    }, [])
+    }, [queryDone])
 
 
 
 
     return (
-        <div id="events" style={{ backgroundColor: "#1D1F27" }}>
+        <div id="events" style={{ backgroundColor: "#1D1F27"}}>
             <div className="container">
                 <br />
                 <br />
@@ -51,12 +51,12 @@ function Events() {
                         item.title
                     )
                 })} */}
-                <CardGroup />
+                <CardGroup events={upcomingEvents} />
                 <br />
                 <br />
                 <h1 className="text-light">Past <span className="title2">Events</span></h1>
-                <CardGroup />
-                <hr />
+                <CardGroup events={pastEvents} />
+                <br />
             </div>
         </div>
     )

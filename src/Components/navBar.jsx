@@ -19,7 +19,7 @@ function NavBar() {
                     <div className='d-flex text-white'>
                         <Nav.Link style={styles.linkText} className='mx-2' href="#about">About us</Nav.Link>
                         <Nav.Link style={styles.linkText} className='mx-2' href="#events">Events</Nav.Link>
-                        <Nav.Link style={styles.linkText} className='mx-2' href="#link">Contact</Nav.Link>
+                        <Nav.Link style={styles.linkText} className='mx-2' href="#contact">Contact</Nav.Link>
                     </div>
                 </Navbar.Collapse>
             </Container>
