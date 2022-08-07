@@ -7,13 +7,10 @@ function CardGroup(props) {
             {
                 props.events.map((item, index) => {
                     return (
-                        <EventCard title={item.title} description={item.description} imageUrl={item.image_url}/>
+                        <EventCard key={index} title={item.title} description={item.description} imageUrl={item.image_url}/>
                     )
                 })
             }
-            {/* {Array.from({ length: 3 }).map((_, idx) => (
-                <EventCard />
-            ))} */}
         </Row>
     );
 }
