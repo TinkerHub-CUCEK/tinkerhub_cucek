@@ -1,0 +1,9 @@
+.col1 .col3{
+    display: unset;
+}
+
+@media only screen and (max-width: 600px){
+    .col1 .col3{
+        display: none;
+    }
+}
