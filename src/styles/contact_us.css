@@ -9,3 +9,12 @@
 .contact-detail{
     padding: 20px;
 }
+
+.form-box{
+    background: rgb(36, 39, 52) !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: 1.5px solid rgb(255, 255, 255) !important;
+    border-radius: 0%;
+}

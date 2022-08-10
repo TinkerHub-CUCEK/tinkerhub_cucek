@@ -23,11 +23,11 @@ function App() {
         </div>
         <AboutUs />
         <Events />
-        <ContactUs />
         <Team />
+        <ContactUs />
         <Footer />
       </div>
-      
+
     </div>
   );
 }

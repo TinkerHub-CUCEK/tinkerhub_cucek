@@ -3,6 +3,7 @@ import phone from "../assets/phone.png"
 import mail from "../assets/mail.png"
 import "../styles/contact_us.css"
 import { Form } from "react-bootstrap"
+import "../styles/contact_us.css"
 
 
 function ContactUs() {
@@ -34,7 +35,7 @@ function ContactUs() {
             .catch((err) => alert("There was an error while trying to submit the form"));
     }
     return (
-        <div id="contact" style={{ backgroundColor: "#242734" }}>
+        <div id="contact" style={{ backgroundColor: "#1D1F27" }}>
             <div className="container text-light">
                 <h1 className="text-light">Contact <span className="title2">Us</span></h1>
                 <div>
@@ -60,19 +61,19 @@ function ContactUs() {
                     <form onSubmit={handleFormSubmit} className="card-body" action="" method="post">
                         <Form.Group>
                             <Form.Label>Name</Form.Label>
-                            <Form.Control type="text" placeholder="Your name" name="name" />
+                            <Form.Control className="form-box text-white" type="text" placeholder="Your name" name="name" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Your email" name="email" />
+                            <Form.Control className="form-box text-white" type="email" placeholder="Your email" name="email" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Subject</Form.Label>
-                            <Form.Control type="text" placeholder="subject" name="subject" />
+                            <Form.Control className="form-box text-white" type="text" placeholder="subject" name="subject" />
                         </Form.Group>
                         <Form.Group>
                             <Form.Label>Message</Form.Label>
-                            <textarea className="form-control" type="text" placeholder="message" name="message"></textarea>
+                            <textarea  className="form-control form-box text-white" type="text" placeholder="message" name="message"></textarea>
                         </Form.Group>
                         <Form.Group>
                             <br />

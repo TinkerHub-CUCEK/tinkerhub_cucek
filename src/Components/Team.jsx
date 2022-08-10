@@ -2,7 +2,7 @@ import TeamCards from "./TeamCards"
 
 function Team() {
     return (
-        <div style={{ backgroundColor: "#1D1F27" }}>
+        <div style={{ backgroundColor: "#242734" }}>
             <div  className="container">
                 <br />
                 <div>
