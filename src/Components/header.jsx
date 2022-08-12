@@ -1,10 +1,11 @@
 import logo1 from "../assets/logo1.png"
+import main_logo from "../assets/main_logo.png"
 
 function Header() {
     return (
         <div>
             <div className="text-light">
-                <img src={logo1} alt="tinkerhub"></img><p style={{ fontSize: "70px" }}>Tinker<span style={{ fontWeight: "300" }}>Hub</span></p><span style={{ fontSize: "40px", fontWeight: "300" }}>CUCEK</span>
+                <img style={{maxWidth: "75vw"}} src={ main_logo } alt="main_logo" />
             </div>
 
             <div className="text-light intro">

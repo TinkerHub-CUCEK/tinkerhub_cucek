@@ -18,8 +18,11 @@ function App() {
         <div className="container">
           <NavBar />
           <Header />
+          <div style={{ height: "5px", backgroundColor: "yellow", width: "20%" }}></div>
+          <br />
           <SocialIcons />
           <JoinButton />
+          <br />
         </div>
         <AboutUs />
         <Events />
