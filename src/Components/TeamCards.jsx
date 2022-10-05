@@ -8,6 +8,7 @@ import riya from "../assets/team/riya.jpg"
 import dhilshad from "../assets/team/dhilshad.jpg"
 import dinasree from "../assets/team/dinasree.jpg"
 import ashika from "../assets/team/ashika.jpg"
+import stephy from "../assets/team/stephy.jpeg"
 
 
 function TeamCards() {
@@ -41,6 +42,11 @@ function TeamCards() {
             "name": "Dinasree",
             "photo": dinasree,
             "title": "Media Lead"
+        },
+        {
+            "name": "Stephy",
+            "photo": stephy,
+            "title": "WIT Tech Lead"
         }
     ]
     return (
