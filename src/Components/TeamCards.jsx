@@ -9,7 +9,7 @@ import dhilshad from "../assets/team/dhilshad.jpg"
 import dinasree from "../assets/team/dinasree.jpg"
 import ashika from "../assets/team/ashika.jpg"
 import stephy from "../assets/team/stephy.jpeg"
-
+import abhijith from "../assets/team/abhijith.jpg"
 
 function TeamCards() {
     const teamMembers = [
@@ -19,19 +19,24 @@ function TeamCards() {
             "title": "Campus Lead"
         },
         {
-            "name": "Anu fasmin",
-            "photo": anu,
-            "title": "Co-lead"
-        },
-        {
-            "name": "Riya Rose James",
-            "photo": riya,
-            "title": 'Creative lead'
+            "name": "Abhijith Ram P",
+            "photo": abhijith,
+            "title": "Tech Lead"
         },
         {
             "name": "Ashika",
             "photo": ashika,
             "title": "WIT Lead"
+        },
+        {
+            "name": "Anu fasmin",
+            "photo": anu,
+            "title": "WIT Co-lead"
+        },
+        {
+            "name": "Riya Rose James",
+            "photo": riya,
+            "title": 'WIT Creative lead'
         },
         {
             "name": "Dhilshad",
@@ -41,7 +46,7 @@ function TeamCards() {
         {
             "name": "Dinasree",
             "photo": dinasree,
-            "title": "Media Lead"
+            "title": "WIT Media Lead"
         },
         {
             "name": "Stephy",
