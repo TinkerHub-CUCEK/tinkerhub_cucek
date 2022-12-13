@@ -5,18 +5,18 @@ import Row from 'react-bootstrap/Row';
 
 
 function TeamCards(props) {
-    
+
     return (
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={5} className="g-4">
             {
                 props.members.map(
                     (member, idx) => {
                         return (
                             <Col key={idx}>
-                                <Card className="bg-dark text-light">
+                                <Card border='light' className="bg-dark text-light">
                                     <Card.Img variant="top" src={member.photo} />
                                     <Card.Body>
-                                        <Card.Title>{ member.name }  </Card.Title>
+                                        <Card.Title>{member.name}  </Card.Title>
                                         <Card.Text>
                                             {member.title}
                                         </Card.Text>
