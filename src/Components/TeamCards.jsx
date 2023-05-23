@@ -6,16 +6,16 @@ import teamMembers from '../data/team';
 function TeamCards() {
     
     return (
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={5} className="g-4">
             {
-                teamMembers.map(
+                props.members.map(
                     (member, idx) => {
                         return (
-                            <Col>
-                                <Card className="bg-dark text-light">
+                            <Col key={idx}>
+                                <Card border='light' className="bg-dark text-light">
                                     <Card.Img variant="top" src={member.photo} />
                                     <Card.Body>
-                                        <Card.Title>{ member.name }  </Card.Title>
+                                        <Card.Title>{member.name}  </Card.Title>
                                         <Card.Text>
                                             {member.title}
                                         </Card.Text>
