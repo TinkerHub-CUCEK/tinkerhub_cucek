@@ -34,7 +34,8 @@ const teamMembers = [
     },
     {
         "name": "Aiswarya",
-        "photo": Aiswarya
+        "photo": Aiswarya,
+        "title": "Media Lead"
     }
 ]
 
