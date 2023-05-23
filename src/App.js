@@ -10,7 +10,6 @@ import Events from "./Components/Events"
 import ContactUs from "./Components/ContactUs"
 import Footer from "./Components/Footer"
 import Team from "./Components/Team"
-import WitLeads from "./Components/witLeads"
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
         <Events />
 
         <Team />
-        <WitLeads />
+        {/* <WitLeads /> */}
         <ContactUs />
         <Footer />
       </div>
