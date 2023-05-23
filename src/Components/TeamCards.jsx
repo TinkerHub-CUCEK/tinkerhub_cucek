@@ -1,11 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import teamMembers from '../data/team';
 
-
-
-function TeamCards(props) {
-
+function TeamCards() {
+    
     return (
         <Row xs={1} md={5} className="g-4">
             {
