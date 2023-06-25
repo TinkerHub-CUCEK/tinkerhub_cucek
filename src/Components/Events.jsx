@@ -1,7 +1,6 @@
-import { db } from "../Firebase"
+import { baseUrl } from "../config"
 import { useEffect, useState } from "react"
 import "../styles/events.css"
-import { collection, query, onSnapshot } from "firebase/firestore"
 import CardGroup from "./CardGroup"
 
 
@@ -11,36 +10,59 @@ function Events() {
     const [pastEvents, setPastEvents] = useState([])
     const [queryDone, setQueryDone] = useState(false)
 
-    useEffect(() => {
-        var tempUEvents = []
+    const fetchPastEvents = () => {
         var tempPEvents = []
         if (!queryDone) {
-            const q = query(collection(db, "events"));
-            onSnapshot(q, (snapshot) => {
-                snapshot.docs.forEach(element => {
-                    // let id = element.id
-                    let data = element.data()
-                    if (data.type === "upcoming") {
-                        tempUEvents = [...tempUEvents, data]
+            fetch(`${baseUrl}/databases/(default)/documents/events/`)
+                .then(
+                    (resp) => {
+                        resp.json().then(
+                            (val) => {
+                                var past = []
+                                var upcoming = []
+                                for (var i = 0; i < val.documents.length; i++) {
+                                    if (val.documents[i].fields.type.stringValue === "upcoming") {
+                                        upcoming.push(
+                                            {
+                                                title: val.documents[i].fields.title.stringValue,
+                                                description: val.documents[i].fields.description.stringValue,
+                                                type: val.documents[i].fields.type.stringValue,
+                                                image_url: val.documents[i].fields.image_url.stringValue
+                                            }
+                                        )
+                                    }
+                                    else{
+                                        past.push(
+                                            {
+                                                title: val.documents[i].fields.title.stringValue,
+                                                description: val.documents[i].fields.description.stringValue,
+                                                type: val.documents[i].fields.type.stringValue,
+                                                image_url: val.documents[i].fields.image_url.stringValue
+                                            }
+                                        )
+                                    }
+                                }
+                                setPastEvents(past)
+                                setUpcomingEvents(upcoming)
+                            }
+                        )
                     }
-                    else if (data.type === "past") {
-                        tempPEvents = [...tempPEvents, data]
-                    }
-
-                    setUpcomingEvents(tempUEvents)
-                    setPastEvents(tempPEvents)
-                });
-            });
-            setQueryDone(true)
+                )
         }
+    }
 
-    }, [queryDone])
+    useEffect(() => {
+        var tempUEvents = []
+        fetchPastEvents()
+    }
+
+        , [queryDone])
 
 
 
 
     return (
-        <div id="events" style={{ backgroundColor: "#1D1F27"}}>
+        <div id="events" style={{ backgroundColor: "#1D1F27" }}>
             <div className="container">
                 <br />
                 <br />
